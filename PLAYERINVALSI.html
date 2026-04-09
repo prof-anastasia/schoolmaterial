@@ -1,0 +1,76 @@
+<!doctype html> 
+
+<html lang="it"> 
+
+<head><title></title></head> 
+
+<body> 
+
+<h1> EXERCISE 1 </h1> 
+
+<audio id="audio1" controls> 
+
+<source src="https://prof-anastasia.github.io/schoolmaterial/EX1.mp3" type="audio/mpeg"> 
+
+</audio> 
+
+<br><br> 
+
+<h1> EXERCISE 2 </h1> 
+
+<audio id="audio2" controls> 
+
+<source src="https://prof-anastasia.github.io/schoolmaterial/EX2.mp3" type="audio/mpeg"> 
+
+</audio> 
+
+<br><br> 
+
+<h1> EXERCISE 3 </h1> 
+
+<audio id="audio3" controls> 
+
+<source src="https://prof-anastasia.github.io/schoolmaterial/EX3.mp3" type="audio/mpeg"> 
+
+</audio> 
+ 
+
+<script> 
+
+var audio1 = document.getElementById("audio1"); 
+
+var audio2 = document.getElementById("audio2"); 
+
+var audio3 = document.getElementById("audio3"); 
+
+ 
+
+audio1.addEventListener("play", function() { 
+
+audio2.pause(); 
+
+audio3.pause(); 
+
+}); 
+
+audio2.addEventListener("play", function() { 
+
+audio1.pause(); 
+
+audio3.pause(); 
+
+}); 
+
+audio3.addEventListener("play", function() { 
+
+audio1.pause(); 
+
+audio2.pause(); 
+
+}); 
+
+</script> 
+
+</body> 
+
+</html> 
